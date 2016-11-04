@@ -14,21 +14,17 @@ Installation
  * Pull the latest version of the image.
  
 ```bash
-docker pull romeoz/docker-phpfpm
+docker pull alphadoggames/php-5.6
 ```
 
-or other versions (7.1, 7.0, 5.6, 5.5, 5.4 or 5.3):
-
 ```bash
-docker pull romeoz/docker-phpfpm:5.5
+docker pull alphadoggames/php-5.6
 ```
 
 Alternately you can build the image yourself.
 
 ```bash
-git clone https://github.com/romeoz/docker-phpfpm.git
-cd docker-phpfpm
-docker build -t="$USER/docker-phpfpm" .
+docker build -t alphadoggames/php-5.6 .
 ```
 
 Quick Start
@@ -37,7 +33,7 @@ Quick Start
 Run the application container:
 
 ```bash
-docker run --name app -d -p 9000:9000 romeoz/docker-phpfpm
+docker run --name app -d -p 9000:9000 alphadoggames/php-5.6
 ```
 
 The simplest way to login to the app container is to use the `docker exec` command to attach a new process to the running container.
@@ -56,7 +52,7 @@ You can use one of two choices to install the required php-extensions:
 2. Create your container on based the current. Сontents Dockerfile:
 
 ```
-FROM romeoz/docker-phpfpm:5.5
+FROM alphadoggames/php-5.6
 
 RUN apt-get update \
     && apt-get install -y php-mongo \
@@ -66,14 +62,14 @@ WORKDIR /var/www/app/
 
 EXPOSE 9000
 
-CMD ["/usr/sbin/php-fpm5.5"]
+CMD ["/usr/sbin/php-fpm5.6"]
 ```
 
 Next step,
 
 ```bash
-docker build -t php-5.6 .
-docker run --name app -d -p 9090:9000 php-5.6
+docker build -t alphadoggames/php-5.6 .
+docker run --name app -d -p 9090:9000 alphadoggames/php-5.6
 ```
 
 >See installed php-extension: `docker exec -it app php -m`
