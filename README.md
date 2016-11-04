@@ -17,10 +17,6 @@ Installation
 docker pull alphadoggames/php-5.6
 ```
 
-```bash
-docker pull alphadoggames/php-5.6
-```
-
 Alternately you can build the image yourself.
 
 ```bash
@@ -119,7 +115,7 @@ Create the file `/etc/logrotate.d/docker-containers` with the following text ins
 Out of the box
 -------------------
  * Ubuntu 12.04, 14.04 or 16.04 LTS 
- * PHP 5.3, 5.4, 5.5, 5.6, 7.0 or 7.1
+ * PHP 5.6
  * Composer (package manager)
 
 >Environment depends on the version of PHP.
