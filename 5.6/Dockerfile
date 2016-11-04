@@ -1,5 +1,5 @@
 FROM ubuntu:xenial
-MAINTAINER romeOz <serggalka@gmail.com>
+MAINTAINER George Hornmoen <george@alphadoggames.com>
 
 ENV OS_LOCALE="en_US.UTF-8"
 RUN locale-gen ${OS_LOCALE}
