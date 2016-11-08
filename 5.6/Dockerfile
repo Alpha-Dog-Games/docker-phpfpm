@@ -39,7 +39,9 @@ RUN sed -i "s~PHP_RUN_DIR~${PHP_RUN_DIR}~g" ${PHP_CONF_DIR}/fpm/php-fpm.conf \
 	&& sed -i "s~PHP_LOG_DIR~${PHP_LOG_DIR}~g" ${PHP_CONF_DIR}/fpm/php-fpm.conf \
 	&& chown www-data:www-data ${PHP_DATA_DIR} -Rf
 
-WORKDIR /var/www
+RUN chown www-data:www-data ${PHP_CONF_DIR} -Rf
+	
+WORKDIR /var/www/app
 
 EXPOSE 9000
 
