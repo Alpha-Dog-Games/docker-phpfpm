@@ -41,7 +41,7 @@ RUN sed -i "s~PHP_RUN_DIR~${PHP_RUN_DIR}~g" ${PHP_CONF_DIR}/fpm/php-fpm.conf \
 
 RUN chown www-data:www-data ${PHP_CONF_DIR} -Rf
 	
-WORKDIR /var/www/app
+WORKDIR /var/www/monstrocity/
 
 EXPOSE 9000
 
